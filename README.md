@@ -80,7 +80,7 @@ source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-프로젝트 폴더에 `.env` 파일을 만들고 OpenAI API 키를 적는다.
+프로젝트 폴더에 `.env` 파일을 만들고 자신의 OpenAI API 키를 적는다.
 
 ```
 OPENAI_API_KEY=sk-...
@@ -101,8 +101,7 @@ python run_gold.py
 
 - 30문항 전체 채점은 한 번에 약 2.5달러가 들었다. 토큰 수로 추정한 값이다.
 - 모델은 환경 변수 `AGENT_MODEL`로 바꾼다. 기본값은 `openai:gpt-5.5`이고, 위의 수치는 모두 이 모델로 잰 것이다.
-- 연습용 DB인 `shop.db`가 저장소에 들어 있어 DB를 따로 만들 필요가 없다. `python make_db.py`는 이 DB를 다시 만드는 스크립트이며, 공개하지 않은 입력 자료가 있어야 실행된다.
-- 입력 자료가 없으면 과거 쿼리 검색(`search_queries`)이 빈 결과를 돌려준다. 이 상태로는 채점해 보지 않았으므로 위 표의 수치가 그대로 나오지 않을 수 있다.
+- 연습용 DB인 `shop.db`가 저장소에 들어 있어 DB를 따로 만들 필요가 없다. 안의 값은 모두 지어낸 연습용 데이터다.
 
 ## 주요 파일
 
@@ -118,24 +117,6 @@ python run_gold.py
 | `conventions.md` | BA가 자유롭게 적는 메모. 에이전트가 실행할 때마다 읽는다 |
 | `make_db.py`, `shop.db` | 연습용 DB를 만드는 스크립트와 그 결과 |
 | `tickets.json`, `run_tests.py` | 골드셋을 만들기 전에 쓰던 티켓 8건 시험 |
-
-## 공개하지 않은 것
-
-| 항목 | 내용 |
-|---|---|
-| `.env` | OpenAI API 키 |
-| `db/` | 제공받은 입력 자료. 테이블 정의서 35개, BA 개인 쿼리 31개, 대시보드 캡처와 패널 쿼리 4개, 데이터 추출본 |
-
-`shop.db`는 테이블 구조만 정의서와 같고, 안의 값은 모두 지어낸 연습용 데이터다. 에이전트는 실제 추출본을 읽지 않는다.
-
-입력 자료가 있다면 아래 위치에 둔다.
-
-```
-db/
-├── A-schema/DDL/*.sql              테이블 정의서
-├── A-sql/바탕화면_쿼리/*.txt        BA 개인 쿼리
-└── nuri_q7wd2m/A-dashsql/*.sql     대시보드 패널 쿼리
-```
 
 ## 읽을 때 알아둘 점
 
