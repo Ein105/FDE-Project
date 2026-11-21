@@ -1,0 +1,5 @@
+# Python 3.13에서 확인한 버전
+deepagents==0.7.41
+langchain-openai==1.8.5
+python-dotenv==1.2.4
+PyYAML==6.0.4

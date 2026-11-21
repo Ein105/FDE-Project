@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1916" width="1000" height="1916" role="img" aria-labelledby="fc-title fc-desc" xmlns:c2pa="http://c2pa.org/manifest">
+<title id="fc-title">집계 가능 여부 판정 순서도</title>
+<desc id="fc-desc">마케팅팀 요청을 판정 에이전트가 점검하고 과거 쿼리와 대시보드 정의를 검색한다. 정의가 정해지지 않으면 즉시 되묻고, 정해지면 테이블을 탐색해 가능, 부분 가능, 불가, 사람 확인 필요 중 하나로 판정한다. BA가 검토해 확정한 뒤 마케팅팀에 답이 나간다. 지표 A부터 G까지를 재는 위치가 표시되어 있다.</desc>
+<style><![CDATA[
+svg { font-family: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", "Noto Sans CJK KR", sans-serif; }
+.band { fill: #FAFBFC; stroke: #C9D2DC; stroke-width: 1; }
+.t-band { font-size: 12px; font-weight: 600; fill: #5A6878; }
+.t-title { font-size: 14px; font-weight: 600; fill: #17212C; }
+.t-det { font-size: 12px; fill: #5A6878; }
+.t-mono { font-family: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: 11.5px; fill: #17212C; }
+.t-dec { font-size: 13px; font-weight: 500; fill: #17212C; }
+.t-edge { font-size: 12px; font-weight: 500; fill: #5A6878; }
+.t-pill { font-size: 13px; font-weight: 600; fill: #FFFFFF; }
+.n rect { stroke-width: 1.25; }
+.n-mkt rect { fill: #E8EDF2; stroke: #5E6E80; }
+.n-agent rect { fill: #E7EAFB; stroke: #3547C8; }
+.n-ba rect { fill: #FAEFD9; stroke: #98600A; }
+.n-ans rect { fill: #DCF2EA; stroke: #0C7A5F; }
+.dec { fill: #FFFFFF; stroke: #3547C8; stroke-width: 1.25; }
+.pill { fill: #3547C8; stroke: none; }
+.edge { fill: none; stroke: #6B7A8B; stroke-width: 1.5; }
+.head { fill: #6B7A8B; }
+.inset { fill: none; stroke: #C9D2DC; stroke-width: 1; stroke-dasharray: 5 4; }
+.badge circle { fill: #B3245E; stroke: #FFFFFF; stroke-width: 2; }
+.t-badge { font-size: 12px; font-weight: 600; fill: #FFFFFF; }
+]]></style>
+<rect x="0.5" y="0.5" width="999" height="1915" rx="12" fill="#FFFFFF" stroke="#C9D2DC"/>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path class="head" d="M0 1 L9 5 L0 9 z"/></marker></defs>
+<rect class="band" x="10" y="20" width="980" height="120" rx="10"/>
+<rect class="band" x="10" y="150" width="980" height="1214" rx="10"/>
+<rect class="band" x="10" y="1374" width="980" height="366" rx="10"/>
+<rect class="band" x="10" y="1750" width="980" height="146" rx="10"/>
+<text class="t-band" x="28" y="44" dominant-baseline="central">마케팅팀</text>
+<text class="t-band" x="28" y="174" dominant-baseline="central">판정 에이전트</text>
+<text class="t-band" x="28" y="1398" dominant-baseline="central">BA 확인</text>
+<text class="t-band" x="28" y="1774" dominant-baseline="central">마케팅팀이 받는 답</text>
+<line class="edge" x1="380" y1="110" x2="380" y2="186" marker-end="url(#arrow)"/>
+<line class="edge" x1="680" y1="81" x2="574" y2="81" marker-end="url(#arrow)"/>
+<line class="edge" x1="380" y1="248" x2="380" y2="272" marker-end="url(#arrow)"/>
+<line class="edge" x1="380" y1="334" x2="380" y2="356" marker-end="url(#arrow)"/>
+<path class="edge" d="M530 406 L820 406 L820 114" marker-end="url(#arrow)"/>
+<line class="edge" x1="380" y1="452" x2="380" y2="484" marker-end="url(#arrow)"/>
+<line class="edge" x1="380" y1="546" x2="380" y2="570" marker-end="url(#arrow)"/>
+<line class="edge" x1="380" y1="632" x2="380" y2="656" marker-end="url(#arrow)"/>
+<line class="edge" x1="380" y1="718" x2="380" y2="740" marker-end="url(#arrow)"/>
+<line class="edge" x1="530" y1="790" x2="646" y2="790" marker-end="url(#arrow)"/>
+<line class="edge" x1="380" y1="836" x2="380" y2="868" marker-end="url(#arrow)"/>
+<line class="edge" x1="380" y1="930" x2="380" y2="952" marker-end="url(#arrow)"/>
+<line class="edge" x1="530" y1="1002" x2="646" y2="1002" marker-end="url(#arrow)"/>
+<line class="edge" x1="380" y1="1048" x2="380" y2="1078" marker-end="url(#arrow)"/>
+<line class="edge" x1="530" y1="1128" x2="646" y2="1128" marker-end="url(#arrow)"/>
+<line class="edge" x1="380" y1="1174" x2="380" y2="1206" marker-end="url(#arrow)"/>
+<line class="edge" x1="380" y1="1254" x2="380" y2="1282" marker-end="url(#arrow)"/>
+<path class="edge" d="M830 790 L900 790 L900 1315 L574 1315" marker-end="url(#arrow)"/>
+<line class="edge" x1="830" y1="1002" x2="900" y2="1002"/>
+<line class="edge" x1="830" y1="1128" x2="900" y2="1128"/>
+<line class="edge" x1="380" y1="1344" x2="380" y2="1404" marker-end="url(#arrow)"/>
+<line class="edge" x1="150" y1="1490" x2="840" y2="1490"/>
+<line class="edge" x1="150" y1="1490" x2="150" y2="1510" marker-end="url(#arrow)"/>
+<line class="edge" x1="380" y1="1466" x2="380" y2="1510" marker-end="url(#arrow)"/>
+<line class="edge" x1="610" y1="1490" x2="610" y2="1510" marker-end="url(#arrow)"/>
+<line class="edge" x1="840" y1="1490" x2="840" y2="1510" marker-end="url(#arrow)"/>
+<line class="edge" x1="150" y1="1614" x2="150" y2="1638"/>
+<line class="edge" x1="610" y1="1614" x2="610" y2="1638"/>
+<line class="edge" x1="840" y1="1614" x2="840" y2="1638"/>
+<line class="edge" x1="150" y1="1638" x2="840" y2="1638"/>
+<line class="edge" x1="380" y1="1614" x2="380" y2="1658" marker-end="url(#arrow)"/>
+<line class="edge" x1="380" y1="1720" x2="380" y2="1776"/>
+<line class="edge" x1="190" y1="1776" x2="810" y2="1776"/>
+<line class="edge" x1="190" y1="1776" x2="190" y2="1796" marker-end="url(#arrow)"/>
+<line class="edge" x1="500" y1="1776" x2="500" y2="1796" marker-end="url(#arrow)"/>
+<line class="edge" x1="810" y1="1776" x2="810" y2="1796" marker-end="url(#arrow)"/>
+<text class="t-edge" x="625" y="67" text-anchor="middle" dominant-baseline="central">보완 후 재요청</text>
+<text class="t-edge" x="546" y="392" dominant-baseline="central">아니오, 정보 부족</text>
+<text class="t-edge" x="390" y="469" dominant-baseline="central">예</text>
+<text class="t-edge" x="546" y="777" dominant-baseline="central">없음</text>
+<text class="t-edge" x="390" y="853" dominant-baseline="central">있음</text>
+<text class="t-edge" x="546" y="989" dominant-baseline="central">일부만</text>
+<text class="t-edge" x="390" y="1064" dominant-baseline="central">전부</text>
+<text class="t-edge" x="546" y="1115" dominant-baseline="central">있음</text>
+<text class="t-edge" x="390" y="1191" dominant-baseline="central">없음</text>
+<text class="t-edge" x="737" y="1302" text-anchor="middle" dominant-baseline="central">판정 전달</text>
+<text class="t-edge" x="392" y="1478" dominant-baseline="central">판정 종류별로</text>
+<text class="t-edge" x="392" y="1762" dominant-baseline="central">확정된 답 회신</text>
+<g class="n n-mkt"><rect x="190" y="52" width="380" height="58" rx="8"/>
+<text class="t-title" x="380.0" y="72" text-anchor="middle" dominant-baseline="central">요청 접수</text>
+<text class="t-det" x="380.0" y="93" text-anchor="middle" dominant-baseline="central">이메일 확인, 아침 미팅 뒤 Jira 티켓 할당</text>
+</g>
+<g class="n n-ans"><rect x="680" y="52" width="280" height="58" rx="8"/>
+<text class="t-title" x="820.0" y="72" text-anchor="middle" dominant-baseline="central">부족한 정보 즉시 안내</text>
+<text class="t-det" x="820.0" y="93" text-anchor="middle" dominant-baseline="central">빠진 항목을 질문으로 회신, BA 대기 없음</text>
+</g>
+<g class="n n-agent"><rect x="190" y="190" width="380" height="58" rx="8"/>
+<text class="t-title" x="380.0" y="210" text-anchor="middle" dominant-baseline="central">1. 요청 점검</text>
+<text class="t-det" x="380.0" y="231" text-anchor="middle" dominant-baseline="central">티켓에서 지표, 대상 범위, 기간을 정리한다</text>
+</g>
+<g class="n n-agent"><rect x="190" y="276" width="380" height="58" rx="8"/>
+<text class="t-title" x="380.0" y="296" text-anchor="middle" dominant-baseline="central">2. 쿼리 검색</text>
+<text class="t-det" x="380.0" y="317" text-anchor="middle" dominant-baseline="central"><tspan class="t-mono">search_queries()</tspan>로 대시보드 정의와 과거 처리 방식 확인</text>
+</g>
+<polygon class="dec" points="230,406 380,360 530,406 380,452"/>
+<text class="t-dec" x="380" y="397" text-anchor="middle" dominant-baseline="central">정의가 정해지는가?</text>
+<text class="t-dec" x="380" y="415" text-anchor="middle" dominant-baseline="central">(대시보드 정의 우선)</text>
+<g class="n n-agent"><rect x="190" y="488" width="380" height="58" rx="8"/>
+<text class="t-title" x="380.0" y="508" text-anchor="middle" dominant-baseline="central">3. 테이블 목록 확인</text>
+<text class="t-det" x="380.0" y="529" text-anchor="middle" dominant-baseline="central"><tspan class="t-mono">list_tables()</tspan>로 지금 있는 테이블을 새로 조회</text>
+</g>
+<g class="n n-agent"><rect x="190" y="574" width="380" height="58" rx="8"/>
+<text class="t-title" x="380.0" y="594" text-anchor="middle" dominant-baseline="central">4. 관련 테이블 열어보기</text>
+<text class="t-det" x="380.0" y="615" text-anchor="middle" dominant-baseline="central"><tspan class="t-mono">describe_table()</tspan>, <tspan class="t-mono">sample_rows()</tspan> · 낯선 테이블도 확인</text>
+</g>
+<g class="n n-agent"><rect x="190" y="660" width="380" height="58" rx="8"/>
+<text class="t-title" x="380.0" y="680" text-anchor="middle" dominant-baseline="central">5. 코드 뜻 확인</text>
+<text class="t-det" x="380.0" y="701" text-anchor="middle" dominant-baseline="central"><tspan class="t-mono">LX_ZCM_CD</tspan>에서 코드 값의 뜻을 확인, 추측 금지</text>
+</g>
+<polygon class="dec" points="230,790 380,744 530,790 380,836"/>
+<text class="t-dec" x="380" y="781" text-anchor="middle" dominant-baseline="central">필요한 테이블과</text>
+<text class="t-dec" x="380" y="799" text-anchor="middle" dominant-baseline="central">컬럼이 있는가?</text>
+<rect class="pill" x="650" y="768" width="180" height="44" rx="22"/>
+<text class="t-pill" x="740" y="790" text-anchor="middle" dominant-baseline="central">판정: 불가</text>
+<g class="n n-agent"><rect x="190" y="872" width="380" height="58" rx="8"/>
+<text class="t-title" x="380.0" y="892" text-anchor="middle" dominant-baseline="central">6. 검증 쿼리 실행</text>
+<text class="t-det" x="380.0" y="913" text-anchor="middle" dominant-baseline="central"><tspan class="t-mono">run_select()</tspan>로 실제 집계, 데이터 기간도 조회</text>
+</g>
+<polygon class="dec" points="230,1002 380,956 530,1002 380,1048"/>
+<text class="t-dec" x="380" y="993" text-anchor="middle" dominant-baseline="central">데이터가 요청 범위를</text>
+<text class="t-dec" x="380" y="1011" text-anchor="middle" dominant-baseline="central">다 덮는가?</text>
+<rect class="pill" x="650" y="980" width="180" height="44" rx="22"/>
+<text class="t-pill" x="740" y="1002" text-anchor="middle" dominant-baseline="central">판정: 부분 가능</text>
+<polygon class="dec" points="230,1128 380,1082 530,1128 380,1174"/>
+<text class="t-dec" x="380" y="1119" text-anchor="middle" dominant-baseline="central">BA 판단이 필요한</text>
+<text class="t-dec" x="380" y="1137" text-anchor="middle" dominant-baseline="central">부분이 있는가?</text>
+<rect class="pill" x="650" y="1106" width="180" height="44" rx="22"/>
+<text class="t-pill" x="740" y="1128" text-anchor="middle" dominant-baseline="central">판정: 사람 확인 필요</text>
+<rect class="pill" x="290" y="1210" width="180" height="44" rx="22"/>
+<text class="t-pill" x="380" y="1232" text-anchor="middle" dominant-baseline="central">판정: 가능</text>
+<g class="n n-agent"><rect x="190" y="1286" width="380" height="58" rx="8"/>
+<text class="t-title" x="380.0" y="1306" text-anchor="middle" dominant-baseline="central">7. 답 작성</text>
+<text class="t-det" x="380.0" y="1327" text-anchor="middle" dominant-baseline="central">판정, 근거, 산출물(SQL 또는 회신 초안), 확인 필요</text>
+</g>
+<rect class="inset" x="640" y="496" width="300" height="172" rx="8"/>
+<text class="t-edge" x="660" y="520" dominant-baseline="central">에이전트가 쓰는 도구, 모두 읽기 전용</text>
+<text class="t-mono" x="660" y="548" dominant-baseline="central">search_queries()</text>
+<text class="t-det" x="800" y="548" dominant-baseline="central">쿼리 검색</text>
+<text class="t-mono" x="660" y="570" dominant-baseline="central">list_tables()</text>
+<text class="t-det" x="800" y="570" dominant-baseline="central">테이블 목록</text>
+<text class="t-mono" x="660" y="592" dominant-baseline="central">describe_table()</text>
+<text class="t-det" x="800" y="592" dominant-baseline="central">컬럼 구조</text>
+<text class="t-mono" x="660" y="614" dominant-baseline="central">sample_rows()</text>
+<text class="t-det" x="800" y="614" dominant-baseline="central">실제 값 몇 줄</text>
+<text class="t-mono" x="660" y="636" dominant-baseline="central">run_select()</text>
+<text class="t-det" x="800" y="636" dominant-baseline="central">조회만 실행</text>
+<g class="n n-ba"><rect x="190" y="1408" width="380" height="58" rx="8"/>
+<text class="t-title" x="380.0" y="1428" text-anchor="middle" dominant-baseline="central">8. 공통 검토</text>
+<text class="t-det" x="380.0" y="1449" text-anchor="middle" dominant-baseline="central">요청 해석이 맞는가, 근거가 실제로 있는가</text>
+</g>
+<g class="n n-ba"><rect x="45" y="1514" width="210" height="100" rx="8"/>
+<text class="t-title" x="150.0" y="1536" text-anchor="middle" dominant-baseline="central">가능 건</text>
+<text class="t-det" x="150.0" y="1560" text-anchor="middle" dominant-baseline="central">조인으로 건수가 부풀지 않았나</text>
+<text class="t-det" x="150.0" y="1579" text-anchor="middle" dominant-baseline="central">취소, 반품 필터가 빠지지 않았나</text>
+<text class="t-det" x="150.0" y="1598" text-anchor="middle" dominant-baseline="central">결과 숫자가 상식선인가</text>
+</g>
+<g class="n n-ba"><rect x="275" y="1514" width="210" height="100" rx="8"/>
+<text class="t-title" x="380.0" y="1536" text-anchor="middle" dominant-baseline="central">부분 가능 건</text>
+<text class="t-det" x="380.0" y="1560" text-anchor="middle" dominant-baseline="central">말한 범위가 정확한가</text>
+<text class="t-det" x="380.0" y="1579" text-anchor="middle" dominant-baseline="central">빠진 구간을 메울 테이블이 있나</text>
+</g>
+<g class="n n-ba"><rect x="505" y="1514" width="210" height="100" rx="8"/>
+<text class="t-title" x="610.0" y="1536" text-anchor="middle" dominant-baseline="central">불가 건, 가장 엄격하게</text>
+<text class="t-det" x="610.0" y="1560" text-anchor="middle" dominant-baseline="central">열어보지 않은 테이블이 있나</text>
+<text class="t-det" x="610.0" y="1579" text-anchor="middle" dominant-baseline="central">다른 이름, 다른 시스템에 있나</text>
+<text class="t-det" x="610.0" y="1598" text-anchor="middle" dominant-baseline="central">회신 사유와 대안이 적절한가</text>
+</g>
+<g class="n n-ba"><rect x="735" y="1514" width="210" height="100" rx="8"/>
+<text class="t-title" x="840.0" y="1536" text-anchor="middle" dominant-baseline="central">사람 확인 필요 건</text>
+<text class="t-det" x="840.0" y="1560" text-anchor="middle" dominant-baseline="central">BA가 직접 판정</text>
+<text class="t-det" x="840.0" y="1579" text-anchor="middle" dominant-baseline="central">필요하면 선배에게 문의</text>
+</g>
+<g class="n n-ba"><rect x="190" y="1662" width="380" height="58" rx="8"/>
+<text class="t-title" x="380.0" y="1682" text-anchor="middle" dominant-baseline="central">9. BA 확정</text>
+<text class="t-det" x="380.0" y="1703" text-anchor="middle" dominant-baseline="central">고친 건은 사유를 한 줄 기록해 에이전트 개선에 쓴다</text>
+</g>
+<g class="n n-ans"><rect x="50" y="1800" width="280" height="76" rx="8"/>
+<text class="t-title" x="190.0" y="1822" text-anchor="middle" dominant-baseline="central">가능</text>
+<text class="t-det" x="190.0" y="1843" text-anchor="middle" dominant-baseline="central">예상 일정 안내</text>
+<text class="t-det" x="190.0" y="1861" text-anchor="middle" dominant-baseline="central">이후 집계 결과 전달</text>
+</g>
+<g class="n n-ans"><rect x="360" y="1800" width="280" height="76" rx="8"/>
+<text class="t-title" x="500.0" y="1822" text-anchor="middle" dominant-baseline="central">부분 가능</text>
+<text class="t-det" x="500.0" y="1843" text-anchor="middle" dominant-baseline="central">가능한 범위 안내</text>
+<text class="t-det" x="500.0" y="1861" text-anchor="middle" dominant-baseline="central">진행 여부 문의</text>
+</g>
+<g class="n n-ans"><rect x="670" y="1800" width="280" height="76" rx="8"/>
+<text class="t-title" x="810.0" y="1822" text-anchor="middle" dominant-baseline="central">불가</text>
+<text class="t-det" x="810.0" y="1843" text-anchor="middle" dominant-baseline="central">불가 사유 회신</text>
+<text class="t-det" x="810.0" y="1861" text-anchor="middle" dominant-baseline="central">대안 데이터 제안</text>
+</g>
+<g class="badge"><circle cx="192" cy="1288" r="11"/><text class="t-badge" x="192" y="1288" text-anchor="middle" dominant-baseline="central">A</text></g>
+<g class="badge"><circle cx="192" cy="874" r="11"/><text class="t-badge" x="192" y="874" text-anchor="middle" dominant-baseline="central">B</text></g>
+<g class="badge"><circle cx="192" cy="192" r="11"/><text class="t-badge" x="192" y="192" text-anchor="middle" dominant-baseline="central">C</text></g>
+<g class="badge"><circle cx="192" cy="1664" r="11"/><text class="t-badge" x="192" y="1664" text-anchor="middle" dominant-baseline="central">D</text></g>
+<g class="badge"><circle cx="713" cy="1516" r="11"/><text class="t-badge" x="713" y="1516" text-anchor="middle" dominant-baseline="central">E</text></g>
+<g class="badge"><circle cx="682" cy="54" r="11"/><text class="t-badge" x="682" y="54" text-anchor="middle" dominant-baseline="central">F</text></g>
+<g class="badge"><circle cx="168" cy="1774" r="11"/><text class="t-badge" x="168" y="1774" text-anchor="middle" dominant-baseline="central">F</text></g>
+<g class="badge"><circle cx="642" cy="498" r="11"/><text class="t-badge" x="642" y="498" text-anchor="middle" dominant-baseline="central">G</text></g>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTplOGY1OGM4My03NmI5LTQ3N2MtYjg4ZS1lYTJmODFmNDIyODMAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaMjub40kVPnEgB2FZuS7xVQAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo0ZjJhZTBjNi04MGQ3LTQ2YTYtODMzNC1mNzE4NzU3MDU5ODBscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoW0UJtiFJf7Dll6UBrSD8sgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggTK+4SIeoExh4tcmLDJuxkeT3pTav/v4dkNhsrPOLtEWkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaLkG+pEnTkhJaByJyrxvxzAAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYILoOfurCIuLGCdWzrFfLcDnqTF0tURUWZGiiVf9ss5dKZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GUfzZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmU4ZjU4YzgzLTc2YjktNDc3Yy1iODhlLWVhMmY4MWY0MjI4My9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmI4MzU3ZjljLTU3YWEtNGI4OS05YjhmLWFiODNkMmU3YWIwN3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBMr7hIh6gTGHi1yYsMm7GR5PelNq/+/h2Q2Gys84u0RaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggaY3mmoa8Lh39MGZ+6Hhaql9cQXWcp+aY6P+D/Gmo+Q2iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggK22WwiKzVmDWo9aI34uWB0WUyKBbXT2xMHmt9ZdJiSt0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQN+JOwUOgxmtRHiER0/mPpVXnzaHEufonw+RhsaeQErGyRiu0vuG/pz7AY7lvXou5Et7r1DflhKMVx0oLOEDoaY=</c2pa:manifest></metadata></svg>
